@@ -485,9 +485,9 @@ class Formatter(FormatterBase):
         if on:
             if not pagename and page:
                 pagename = page.page_name
-            url = self.request.normalizePagename(pagename)
+            url = wikiutil.normalize_pagename(pagename, self.request.cfg)
             urlPath = url.split("/")
-            thisPath = self.request.normalizePagename(self.page.page_name).split("/")
+            thisPath = wikiutil.normalize_pagename(self.page.page_name, self.request.cfg).split("/")
             while urlPath and thisPath and urlPath[0] == thisPath[0]:
                 # Delete common entries
                 urlPath.pop(0)
