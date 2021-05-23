@@ -11,6 +11,6 @@ from MoinMoin.util import MoinMoinNoFooter
 
 def execute(pagename, request):
     url = Page(request, pagename).url(request, {'action': 'format',
-                                                'mimetype': 'text/x-rst'}, 0)
+                                                'mimetype': 'text/rst'}, 0)
     request.http_redirect(url)
     raise MoinMoinNoFooter

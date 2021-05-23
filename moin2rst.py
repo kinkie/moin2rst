@@ -99,7 +99,7 @@ if __name__ == '__main__':
     request = RequestCLI(url=url, pagename=pageName)
 
     Formatter = wikiutil.importPlugin(request.cfg, "formatter",
-                                      "text_x-rst", "Formatter")
+                                      "text_rst", "Formatter")
     formatter = Formatter(request)
     request.formatter = formatter
 
